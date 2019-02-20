@@ -32,7 +32,6 @@ def consolidate_cart(cart)
 
 
   def apply_clearance(cart)
-    # code here
     discount = 0.20
     cart.each do |item, details|
       if cart[item][:clearance] == true
