@@ -45,7 +45,7 @@ def consolidate_cart(cart)
     cart2 = apply_clearance(cart1)
     total = 0
     cart2.each do |item, info|
-      total += info[:price] * info[:count]
+      total += (info[:price] * info[:count])
     end
     if total > 100
       total *= 0.9
