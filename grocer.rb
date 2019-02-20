@@ -34,7 +34,7 @@ def consolidate_cart(cart)
   def apply_clearance(cart)
     cart.each do |item, info|
       info[:price] *= 0.8 if info[:clearance] == true
-      info[:price] =info[:price].round/10.0
+      info[:price] =info[:price].round(1)
     end
     cart
   end
