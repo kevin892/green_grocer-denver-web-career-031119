@@ -33,8 +33,8 @@ def consolidate_cart(cart)
 
 def apply_clearance(cart)
   cart.each do |item, info|
-    if info[:clearance]==true
-      info[:price] *= (4/5)
+    if info[:clearance] == true
+      info[:price] *= (4)
     end
   end
   cart
