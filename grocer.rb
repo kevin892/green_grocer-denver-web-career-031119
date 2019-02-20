@@ -16,7 +16,7 @@ def consolidate_cart(cart)
     coupon_hash = {}
     cart.each do |item, info|
       coupons.each do |coupon|
-        if item == coupon[:item] && info[:count] >= coupon[:num]
+        if item == coupon[:item] && info[:count] > coupon[:num]
           info[:count] =  info[:count] - coupon[:num]
           if coupon_hash["#{item} W/COUPON"]
             coupon_hash["#{item} W/COUPON"][:count] += 1
