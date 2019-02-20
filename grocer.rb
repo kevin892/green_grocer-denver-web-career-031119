@@ -14,9 +14,9 @@ def consolidate_cart(cart)
 
   def apply_coupons(cart, coupons)
     result = {}
-  cart.each do |food, info|
+  cart.each do |item, info|
     coupons.each do |coupon|
-      if food == coupon[:item] && info[:count] >= coupon[:num]
+      if item == coupon[:item] && info[:count] >= coupon[:num]
         info[:count] =  info[:count] - coupon[:num]
         if result["#{food} W/COUPON"]
           result["#{food} W/COUPON"][:count] += 1
@@ -24,8 +24,8 @@ def consolidate_cart(cart)
           result["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
         end
       end
+      result[item] = info
     end
-
   result
 end	end
 
