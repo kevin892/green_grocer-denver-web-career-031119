@@ -36,7 +36,6 @@ def consolidate_cart(cart)
     cart.each do |item, details|
       if details[:clearance] == true
         details[:price] = (details[:price]*discount).round(2)
-        binding.pry
       end
     end
     cart
