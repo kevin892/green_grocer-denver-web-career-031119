@@ -12,9 +12,8 @@ def consolidate_cart(cart)
     hash
   end
 
-  def apply_coupons(cart:[], coupons:[])
-  # code here	  result = {}
-  # code here#
+  def apply_coupons(cart, coupons)
+    result = {}
   cart.each do |food, info|
     coupons.each do |coupon|
       if food == coupon[:item] && info[:count] >= coupon[:num]
