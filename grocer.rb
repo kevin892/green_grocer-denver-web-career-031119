@@ -28,7 +28,7 @@ def consolidate_cart(cart)
       result[food] = info
     end
     result
-  end	
+  end
 end
 
 
