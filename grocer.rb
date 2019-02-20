@@ -25,10 +25,9 @@ def consolidate_cart(cart)
           end
         end
       end
-      result[food] = info
     end
     result
-  end	
+  end
 
 
 def apply_clearance(cart)
