@@ -14,18 +14,18 @@ def consolidate_cart(cart)
 
   def apply_coupons(cart, coupons)
     coupon_hash = {}
-    cart.each do |food, info|
+    cart.each do |item, info|
       coupons.each do |coupon|
-        if food == coupon[:item] && info[:count] >= coupon[:num]
+        if item == coupon[:item] && info[:count] >= coupon[:num]
           info[:count] =  info[:count] - coupon[:num]
-          if coupon_hash["#{food} W/COUPON"]
-            coupon_hash["#{food} W/COUPON"][:count] += 1
+          if coupon_hash["#{item} W/COUPON"]
+            coupon_hash["#{item} W/COUPON"][:count] += 1
           else
-            coupon_hash["#{food} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
+            coupon_hash["#{item} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
           end
         end
       end
-      coupon_hash[food] = info
+      coupon_hash[item] = info
     end
     coupon_hash
   end
