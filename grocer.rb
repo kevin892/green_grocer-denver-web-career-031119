@@ -37,7 +37,7 @@ def consolidate_cart(cart)
         (info[:price] *= 0.8).round(1)
       end
     end
-    cart.round(1)
+    cart
   end
 
 def checkout(cart, coupons)
