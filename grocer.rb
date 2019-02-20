@@ -13,7 +13,8 @@ def consolidate_cart(cart)
   end
 
   def apply_coupons(cart, coupons)
-  	  result = {}
+    # code here	  result = {}
+    # code here#
     cart.each do |food, info|
       coupons.each do |coupon|
         if food == coupon[:item] && info[:count] >= coupon[:num]
@@ -25,9 +26,10 @@ def consolidate_cart(cart)
           end
         end
       end
+      result[food] = info
     end
     result
-  end
+  end	
 
 
 def apply_clearance(cart)
