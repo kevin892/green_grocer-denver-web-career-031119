@@ -31,28 +31,10 @@ def consolidate_cart(cart)
   end
 
 
-  def apply_clearance(cart)
-    clearance_cart = {}
-    cart.each do |food, info|
-      clearance_cart[food] = {}
-      if info[:clearance] == true
-        clearance_cart[food][:price] = info[:price] * 4 / 5
-      else
-        clearance_cart[food][:price] = info[:price]
-      end
-      clearance_cart[food][:clearance] = info[:clearance]
-      clearance_cart[food][:count] = info[:count]
-    end
-    clearance_cart
-  end
+def apply_clearance(cart)
+  # code here
+end
 
-  def checkout(cart, coupons)
- cart = consolidate_cart(cart: cart)
-    cart = apply_coupons(cart: cart, coupons: coupons)
-    cart = apply_clearance(cart: cart)
-    result = 0
-    cart.each do |food, info|
-      result += (info[:price] * info[:count]).to_f
-    end
-    result > 100 ? result * 0.9 : result
-  end
+def checkout(cart, coupons)
+  # code here
+end
