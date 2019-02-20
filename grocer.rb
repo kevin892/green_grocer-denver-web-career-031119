@@ -55,5 +55,6 @@ def consolidate_cart(cart)
     cart.each do |food, info|
       result += (info[:price] * info[:count]).to_f
     end
+    e d
     result > 100 ? result * 0.9 : result
   end
