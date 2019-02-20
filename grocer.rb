@@ -32,9 +32,10 @@ def consolidate_cart(cart)
 
 
 def apply_clearance(cart)
+  coupon=.2
   cart.each do |item, info|
     if info[:clearance] == true
-      item[:price] = item[:price]*.2).round(1)
+      item[:price] = item[:price]*coupon).round(1)
       binding.pry
 
     end
