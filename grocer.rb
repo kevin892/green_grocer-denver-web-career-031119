@@ -44,7 +44,7 @@ def consolidate_cart(cart)
       clearance_cart[food][:count] = info[:count]
     end
     clearance_cart
-  end	
+  end
 
   def checkout(cart, coupons)
  cart = consolidate_cart(cart: cart)
