@@ -31,13 +31,13 @@ def consolidate_cart(cart)
   end
 
 
-def apply_clearance(cart)
+ddef apply_clearance(cart)
   cart.each do |item, info|
-   if info[:clearance]
-      info[:price] = (info[:price] * 0.8).round(2)
-end
-end
-cart
+    if info[:clearance]
+      info[:price] = (info[:price] * 0.80)
+    end
+  end  
+  cart
 end
 
 def checkout(cart, coupons)
